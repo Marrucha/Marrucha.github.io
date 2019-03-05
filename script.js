@@ -111,7 +111,7 @@ $(document).ready(function() {
     var requestUrl = apiRoot + 'deleteTask';
 
     $.ajax({
-      url: requestUrl + '/?' + $.param({
+      url: requestUrl + '?' + $.param({
         taskId: taskId
       }),
       method: 'DELETE',
@@ -187,7 +187,7 @@ $(document).ready(function() {
       dataType: 'json',
       data: JSON.stringify({
         name: relatedTask.title,
-        description: relatedTask.content,
+        desc: relatedTask.content,
         listId: selectedListId
       }),
       success: function(data) {
